@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <!-- daisy ui cdn link -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.2/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    
+  </style>
+</head>
+
+<body>
+    <div class="text-center">
+      <div class="collapse bg-base-200 ">
+        <input type="radio" name="my-accordion-1" checked="checked" /> 
+        <div class="collapse-title text-xl font-medium">
+          Discuss the scope of var, let, and const?
+        </div>
+        <div class="collapse-content"> 
+          <p>In JavaScript, var, let, and const are used to declare variables. Each has its own scope and behavior, and understanding the scope of these declarations is essential for writing reliable and maintainable code.
+          var-Function Scope: Variables declared with var are function-scoped. This means they are only accessible within the function in which they are declared.let-Block Scope: Variables declared with let are block-scoped. They are only accessible within the block (e.g., inside curly braces) in which they are declared.const-Block Scope: Variables declared with let are block-scoped. They are only accessible within the block (e.g., inside curly braces) in which they are declared.
+          </p>
+        </div>
+      </div>
+      <div class="collapse bg-base-200 text-center">
+        <input type="radio" name="my-accordion-1" /> 
+        <div class="collapse-title text-xl font-medium">
+          Tell us the use cases of null and undefined?
+        </div>
+        <div class="collapse-content"> 
+          <p>Null is basically an assignment value given to a variable. The variable which has been assigned as null contains no value.
+            When we assign null as a value to any variable, it means that it is empty or blank. It is to show that the variable has no value. Also, null is an object in JavaScript.As the name suggests, undefined means "not defined". So we declare a variable but do not assign a value to it, the variable becomes undefined.
+
+            Unlike null, the value of an undefined variable is set by JavaScript as undefined. The variable gets created at the run-time.  </p>
+        </div>
+      </div>
+      <div class="collapse bg-base-200 text-center">
+        <input type="radio" name="my-accordion-1" /> 
+        <div class="collapse-title text-xl font-medium">
+          What do you mean by REST API?
+        </div>
+        <div class="collapse-content"> 
+          <p>An API, or application programming interface, is a set of rules that define how applications or devices can connect to and communicate with each other. A REST API is an API that conforms to the design principles of the REST, or representational state transfer architectural style. For this reason, REST APIs are sometimes referred to RESTful APIs.</p>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

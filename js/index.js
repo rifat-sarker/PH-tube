@@ -2,12 +2,12 @@ const handleCatagory = async ()=>{
     const res = await fetch('https://openapi.programming-hero.com/api/videos/categories');
     const data = await res.json();
 
-    // console.log(data.data.slice(0,3));
-    const sliceData = data.data.slice(0,3).forEach((category) => {
+    // console.log(data.data.slice(0,4));
+    const sliceData = data.data.slice(0,4).forEach((category) => {
         const tabContainer = document.getElementById('tab-container')
         const div = document.createElement('div')
         div.innerHTML = `
-        <a onclick="loadCategory('${category.category_id}')" class="tab">${category.category}</a> 
+        <a onclick="loadCategory('${category.category_id}')" class="tab text-2xl font-semibold text-blue-800">${category.category}</a> 
 
         `
         tabContainer.appendChild(div);
@@ -27,7 +27,7 @@ const loadCategory = async(categoryId) => {
     console.log(news);
     const div = document.createElement("div");
     div.innerHTML= `
-    <div class="card w-96 bg-base-100 shadow-xl">
+    <div class="card max-w-96 max-h-96 mt-6 bg-base-100 shadow-xl">
     <figure>
       <img
         src=${news?.thumbnail}
