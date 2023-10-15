@@ -16,11 +16,11 @@ const handleCatagory = async ()=>{
 
 
 const loadCategory = async(categoryId) => {
-   
+   console.log(categoryId);
    const res = await fetch(`https://openapi.programming-hero.com/api/videos/category/${categoryId}`)
    const data = await res.json();
   //  console.log(data.data);
-   const cardContainer = document.getElementById("card-container");
+   const cardContainer = document.getElementById("card-container")
   // separate the contents
    cardContainer.innerHTML = "";
    data.data?.forEach((news) => {
@@ -50,8 +50,8 @@ const loadCategory = async(categoryId) => {
           </div>
           <div>
             <div class="flex gap-6" ><h6>${news.authors[0].profile_name}</h6>
-            <div class="badge badge-secondary p-3">${news.authors[0].verified ? news.authors[0].verified : "not verified" }</div></div>
-            <small>2022-08-24 17:27:34</small>
+            <div class="badge badge-primary py-4 text-small">${news.authors[0].verified ? news.authors[0].verified : "not verified" }</div></div>
+            <small>17:27:34</small>
             <h3> total views: ${
               news.others.views ? news.others.views : "no views"
             }
@@ -62,11 +62,12 @@ const loadCategory = async(categoryId) => {
       </div>
     </div>
     `
+    
     cardContainer.appendChild(div); 
    })
-   
     
 }
 
 handleCatagory();
+loadCategory("1001");
 
