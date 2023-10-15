@@ -50,7 +50,7 @@ const loadCategory = async(categoryId) => {
           </div>
           <div>
             <div class="flex gap-6" ><h6>${news.authors[0].profile_name}</h6>
-            <div class="badge badge-primary py-4 text-small">${news.authors[0].verified ? news.authors[0].verified : "not verified" }</div></div>
+            <div class="badge badge-primary py-4 text-small">${news.authors[0].verified}</div></div>
             <small>17:27:34</small>
             <h3> total views: ${
               news.others.views ? news.others.views : "no views"
